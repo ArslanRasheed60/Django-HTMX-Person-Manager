@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .list-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="text-2xl font-bold mb-3">Add Person</h1>
+            {% include "partials/add_person_form.html" %}
+        </div>
+        <div class="card">
+            <h2 class="text-xl font-bold mb-3">Filter</h2>
+            {% include "partials/search.html" %}
+            <div id="people-list" class="mt-3">
+                {% include "partials/person_list.html" %}
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/htmx/1.9.6/htmx.min.js" integrity="sha512-tGWc4YBM6ag1pJndcieiU2r+lJXdzBRk70mHE13JoGeZI/QdWQkQ6q1CL1xYdJtTOfARf5oPcxJCnS6bLaM+KA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+</html>

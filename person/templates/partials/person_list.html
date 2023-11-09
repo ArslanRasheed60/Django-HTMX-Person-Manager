@@ -1,0 +1,9 @@
+<div>
+{% for person in people %}
+<div class="list-item">
+    <p>{{ person.name }} - {{ person.email }}</p>
+</div>
+{% empty %}
+<p>No people found.</p>
+{% endfor %}
+</div>

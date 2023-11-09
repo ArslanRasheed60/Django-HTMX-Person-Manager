@@ -1,0 +1,14 @@
+# Setup
+
+> To run the project make sure that you have installed docker 
+
+# Run the project
+
+command : docker-compose up
+
+# project url
+
+project can be accessed at following url
+
+http://localhost:8000/
+
